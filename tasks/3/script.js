@@ -111,3 +111,25 @@ btn11.onclick = function () {
     }
 
 }
+
+//task13
+const input13 = document.querySelector('#text13');
+const btn13 = document.querySelector('#calc13');
+
+btn13.onclick = function () {
+    let houseNumber = +input13.value;
+    switch (true) {
+        case (houseNumber >= 1 && houseNumber <= 5):
+            console.log('Ваша улица - 1');
+            break;
+        case (houseNumber >= 6 && houseNumber <= 11):
+            console.log('Ваша улица - 2');
+            break;
+        case (houseNumber >= 12 && houseNumber <= 20):
+            console.log('Ваша улица - 3');
+            break;
+        default:
+            console.log('Вы ввели не верно номер дома');
+            break;
+    }
+}
