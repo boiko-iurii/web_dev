@@ -133,3 +133,41 @@ btn13.onclick = function () {
             break;
     }
 }
+
+//task14
+const input14 = document.querySelector('#text14');
+const btn14 = document.querySelector('#calc14');
+const output14 = document.querySelector('#output14');
+
+btn14.onclick = function () {
+    let xRays = +input14.value;
+    switch (true) {
+        case (xRays >= 0 && xRays <= 25):
+            output14.innerText = xRays;
+            console.log('Не обнаруживается');
+            break;
+        case (xRays > 25 && xRays <= 50):
+            output14.innerText = xRays;
+            console.log('Снижение числа лимфоцитов');
+            break;
+        case (xRays > 50 && xRays <= 100):
+            output14.innerText = xRays;
+            console.log('Вялость, рвота');
+            break;
+        case (xRays > 100 && xRays <= 150):
+            output14.innerText = xRays;
+            console.log('Смертность 5%');
+            break;
+        case (xRays > 150 && xRays <= 350):
+            output14.innerText = xRays;
+            console.log('Смертность 50% за 30 суток');
+            break;
+        case (xRays > 350 && xRays <= 600):
+            output14.innerText = xRays;
+            console.log('90% смертность за 2 недели');
+            break;
+        default:
+            console.log('Введите значение от 0 до 1000');
+            break;
+    }
+}
