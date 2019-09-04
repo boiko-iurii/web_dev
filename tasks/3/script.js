@@ -171,3 +171,34 @@ btn14.onclick = function () {
             break;
     }
 }
+
+//task16
+const input16 = document.querySelector('#text16');
+const btn16 = document.querySelector('#calc16');
+const output16 = document.querySelector('#output16');
+
+btn16.onclick = function () {
+    let capacity = +input16.value;
+    let cost = 0;
+    switch (true) {
+        case (capacity == 500):
+            output16.innerText = 2525;
+            input16.value = '';
+            break;
+        case (capacity > 500 && capacity <= 1200):
+            output16.innerText = 5050;
+            input16.value = '';
+            break;
+        case (capacity > 1200 && capacity <= 1600):
+            output16.innerText = 9675;
+            input16.value = '';
+            break;
+        case (capacity > 1600 && capacity <= 2000):
+            output16.innerText = 11075;
+            input16.value = '';
+            break;
+        default:
+            alert('Введите значение от 500 до 2000');
+            break;
+    }
+}
