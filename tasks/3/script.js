@@ -93,5 +93,21 @@ btn10.onclick = function () {
         console.log('Имя введено не корректно');
     }
 
+}
+
+//task11
+const input11 = document.querySelector('#text11');
+const btn11 = document.querySelector('#calc11');
+
+btn11.onclick = function () {
+    let userName = input11.value.trim();
+
+    console.log(userName.length);
+
+    if (userName == '') {
+        alert('Введите имя!')
+    } else {
+        alert(`Hello, ${userName}`);
+    }
 
 }
