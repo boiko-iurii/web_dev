@@ -1,0 +1,18 @@
+.set-color {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    margin: 15px;
+    background-color: red;
+}
+.output {
+    min-width: 150px;
+    min-height: 30px;
+    border: 1px solid #000;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+}
+
+* {
+    box-sizing: border-box;
+}
