@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 class="h1">Заголовок страницы</h1>
-    <input type="number">
+    <h1 class="h1">Pretty checkbox</h1>
+    <div class="checkboxes">
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" class="input" />
+            <div class="state">
+                <label>Первый</label>
+            </div>
+        </div>
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" class="input" />
+            <div class="state">
+                <label>Второй</label>
+            </div>
+        </div>
+        <div class="pretty p-switch p-fill">
+            <input type="checkbox" class="input" />
+            <div class="state">
+                <label>Третий</label>
+            </div>
+        </div>
 
-    <button id="btn">Go</button>
-    <br>
-    <br>
-    <div>Output</div>
-    <div id="output"></div>
+        <input type="date">
+    </div>
+
 
     <script src="script.js"></script>
 </body>

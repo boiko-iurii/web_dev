@@ -1,30 +1,20 @@
-let cl = (a) => console.log(a);
-let ci = (a) => console.info(a);
+let checkbox = document.querySelectorAll('.input');
 
-let inputIn = document.querySelector('input');
+checkbox.forEach(function (element) {
+    element.onclick = checkFunc;
 
-let btn = document.querySelector('#btn');
-let output = document.getElementById('output');
+})
 
-
-let arr = [2, 3, 5, 66, 8, 77, 15];
-// arr.length = -10;
-
-
-btn.onclick = function () {
-    let inputInValue = +inputIn.value;
-
-    function elementAvailability(arr, b) {
-        if (arr.indexOf(b) !== -1) {
-            cl('есть');
-        } else {
-            cl('no');
-        }
+function checkFunc() {
+    if (this.checked) {
+        console.log('1');
     }
+    else {
+        console.log('0')
+    }
+    console.log(this);
+}
 
-    elementAvailability(arr, inputInValue);
-
-    cl(Date())
-
-
+document.querySelector('input[type="date"]').oninput = function () {
+    console.log(this.value);
 }
