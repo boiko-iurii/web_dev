@@ -18,3 +18,4 @@ btn2.onclick = () => {
     setColor.style.backgroundColor = color.value;
     output2.innerText = color.value;
 }
+
