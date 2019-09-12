@@ -81,11 +81,32 @@ for (let i = 0; i < 3; i++) {
 
 for (let i = 0; i < 3; i++) {
 
-    for (let k = 0; k < 3; k++) {
+    for (let k = 0; k <= i; k++) {
 
-        output5.innerHTML += 'x';
+        output5.innerHTML += '*';
 
     }
 
     output5.innerHTML += '<br>';
+}
+
+/* Task 6
+**  С помощью вложенных циклов и символа * нарисуйте:
+**                                                   *****
+**                                                   ****
+**                                                   ***
+**                                                   **
+**                                                   *
+**
+*/
+
+for (let i = 6; i >= 0; i--) {
+
+    for (let k = i; k >= 0; k--) {
+
+        output6.innerHTML += '*';
+
+    }
+
+    output6.innerHTML += '<br>';
 }

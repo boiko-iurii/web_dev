@@ -10,4 +10,5 @@ body {
 }
 li {
     margin: 1em 0;
+    font-family: monospace;
 }
