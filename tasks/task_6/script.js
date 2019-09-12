@@ -60,18 +60,20 @@ for (let i = 0; i < 3; i++) {
     for (let k = 0; k < 6; k++) {
         if (k % 2 == 0) {
             output4.innerHTML += '0';
-        }
-        else if ((3 * k + 3) % 3 == 0) {
-            output4.innerHTML += 'x';
+            // console.log('парная итерация', k % 2);
         }
         else {
             output4.innerHTML += '1';
+            // console.log('непарная итерация', k % 2);
         }
     }
-
-    // for (let j = 1; j <= 6; j * 3) {
-    //     output4.innerHTML = 'x';
-    // }
+    for (let j = 0; j < 2; j += 1) {
+        output4.innerHTML += 'x';
+    }
 
     output4.innerHTML += '<br>';
 }
+
+// 2  3n - 1
+// 5
+// 8
