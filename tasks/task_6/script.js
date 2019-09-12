@@ -58,22 +58,34 @@ for (let i = 0; i < 3; i++) {
 
 for (let i = 0; i < 3; i++) {
     for (let k = 0; k < 6; k++) {
-        if (k % 2 == 0) {
+        if ((k + 1) % 3 == 0) {
+            output4.innerHTML += 'x';
+        }
+        else if ((k + 1) % 2 == 0) {
             output4.innerHTML += '0';
-            // console.log('парная итерация', k % 2);
         }
         else {
             output4.innerHTML += '1';
-            // console.log('непарная итерация', k % 2);
         }
     }
-    for (let j = 0; j < 2; j += 1) {
-        output4.innerHTML += 'x';
-    }
-
     output4.innerHTML += '<br>';
 }
 
-// 2  3n - 1
-// 5
-// 8
+/* Task 5
+**  С помощью вложенных циклов и символа * нарисуйте:
+**                                                   *
+**                                                   **
+**                                                   ***
+**
+*/
+
+for (let i = 0; i < 3; i++) {
+
+    for (let k = 0; k < 3; k++) {
+
+        output5.innerHTML += 'x';
+
+    }
+
+    output5.innerHTML += '<br>';
+}
