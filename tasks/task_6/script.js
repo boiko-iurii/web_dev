@@ -58,20 +58,36 @@ for (let i = 0; i < 3; i++) {
 
 for (let i = 0; i < 3; i++) {
     for (let k = 0; k < 6; k++) {
-        if (k % 2 == 0) {
-            output4.innerHTML += '0';
-        }
-        else if ((3 * k + 3) % 3 == 0) {
+
+        if ((k + 1) % 3 == 0) {
             output4.innerHTML += 'x';
+        }
+        else if ((k + 1) % 2 == 0) {
+            output4.innerHTML += '0';
         }
         else {
             output4.innerHTML += '1';
         }
+
+    }
+    output4.innerHTML += '<br>';
+}
+
+/* Task 5
+**  С помощью вложенных циклов и символа * нарисуйте:
+**                                                   *
+**                                                   **
+**                                                   ***
+**
+*/
+
+for (let i = 0; i < 3; i++) {
+
+    for (let k = 0; k < 3; k++) {
+
+        output5.innerHTML += 'x';
+
     }
 
-    // for (let j = 1; j <= 6; j * 3) {
-    //     output4.innerHTML = 'x';
-    // }
-
-    output4.innerHTML += '<br>';
+    output5.innerHTML += '<br>';
 }
