@@ -1,10 +1,10 @@
 
-let output1 = document.querySelector('#output1');
-let output2 = document.querySelector('#output2');
-let output3 = document.querySelector('#output3');
-let output4 = document.querySelector('#output4');
-let output5 = document.querySelector('#output5');
-let output6 = document.querySelector('#output6');
+// let output1 = document.querySelector('#output1');
+// let output2 = document.querySelector('#output2');
+// let output3 = document.querySelector('#output3');
+// let output4 = document.querySelector('#output4');
+// let output5 = document.querySelector('#output5');
+// let output6 = document.querySelector('#output6');
 
 /* Task 1 
 ** С помощью вложенных циклов и символа * нарисуйте: *** *** ***
@@ -109,4 +109,93 @@ for (let i = 6; i >= 0; i--) {
     }
 
     output6.innerHTML += '<br>';
+}
+
+/* Task 7
+**  С помощью вложенных циклов и символа * нарисуйте:
+**                                                     *****
+**                                                    *****
+**                                                   *****
+**
+*/
+
+
+for (let i = 3; i > 0; i--) {
+
+    for (let j = i - 1; j > 0; j--) {
+
+        output7.innerHTML += '&nbsp;';
+
+    }
+    for (let k = 5; k > 0; k--) {
+
+        output7.innerHTML += '*';
+
+    }
+
+    output7.innerHTML += '<br>';
+
+}
+
+/* Task 8
+**  С помощью вложенных циклов и символа * нарисуйте:
+**                                                   *
+**                                                   **
+**                                                   ***
+**                                                   **
+**                                                   *
+**
+*/
+
+
+for (let i = 1; i <= 3; i++) {
+
+    for (let k = 1; k <= i; k++) {
+
+        output8.innerHTML += '*';
+
+    }
+
+    output8.innerHTML += '<br>';
+
+}
+for (let i = 2; i >= 1; i--) {
+
+    for (let k = 1; k <= i; k++) {
+
+        output8.innerHTML += '*';
+
+    }
+
+    output8.innerHTML += '<br>';
+
+}
+
+/* Task 9
+**  С помощью вложенных циклов и символа * нарисуйте:
+**                                                   ******
+**                                                   *    *
+**                                                   *    *
+**                                                   *    *
+**                                                   ******
+**
+*/
+
+
+for (let k = 0; k < 5; k++) {
+
+    output9.innerHTML += '*';
+
+}
+
+for (let i = 0; i < 3; i++) {
+
+    output9.innerHTML += '<br>';
+
+}
+
+for (let k = 0; k < 5; k++) {
+
+    output9.innerHTML += '*';
+
 }
