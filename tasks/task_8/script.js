@@ -205,32 +205,39 @@ function func_10() {
 // Task 11
 // Создайте функцию func_11, которая вернет следующую строку: 10 1 9 2 8 3. . 1 10. Решаем через
 // while.
+// 10 1 9 2 8 3 7 4 6 5
+// 5 6 4 7 3 8 2 9 1 10
 
 function func_11() {
     let out = document.querySelector('#task10');
-    let res = '';
-    let k = 20;
+    let res = 5;
+    // let k = 0;
 
-    while (k > 0) {
-        if (k % 2 == 0) {
-            let p1 = 0;
-            while (p1 < k) {
-                res += 1;
-                p1++;
-            }
+    // while (k < 10) {
+    //     if (k % 2 == 0) {
+    //         res += -k;
+    //     } else {
+    //         res += k;
+    //     }
+    //     k++;
+    //     // res += ' ';
+
+    //     console.log(res);
+    // }
+
+    let m = 10;
+    while (m > 5) {
+        if (m % 2 == 0) {
+            res += m;
         } else {
-            let p2 = 10;
-            while (p2 > 1) {
-                res += 2;
-                p2--;
-            }
+            res += -m;
         }
-        // res += k + `&nbsp;`;
-        k--;
+        m--;
+        // res += ' ';
 
+        console.log(res);
     }
-    out.innerHTML = res;
-
+    // out.innerHTML = res;
 }
 func_11();
 
