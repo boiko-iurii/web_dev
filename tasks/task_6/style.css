@@ -12,3 +12,9 @@ li {
     margin: 1em 0;
     font-family: monospace;
 }
+
+#output19,
+#output20 {
+    display: inline-block;
+    text-align: center;
+}
