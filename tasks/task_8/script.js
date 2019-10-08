@@ -134,25 +134,37 @@ function func_7(a, b) {
 function func_8() {
     let k = 1;
     let coins = 333;
-    while (k <= 2) {
-
+    while (k < 100) {
         coins = coins * 2;
+        if (coins >= 1000000) {
+            return k;
+            break;
+        }
         k++;
-
     }
-    return coins;
-
-
 }
-console.log(func_8());
+// console.log(func_8());
 
 
 // Task 9
 // Создайте функцию func_9, которая принимает 2 параметра и возращает строку от первого до второго введенного параграфа, где все четные числа заменены на символ нуля(0).
 
 function func_9(a, b) {
+    let k = a;
+    let str = '';
+    while (k <= b) {
+        if (k % 2 == 0) {
+            str += 'o';
+        } else {
+            str += k;
+        }
+        k++;
+    }
+    return str;
 
 }
+// console.log(func_9(1, 9));
+
 
 // Task 10
 // Cоздайте функцию func_10, которая вернет строку(решаем через
@@ -166,15 +178,61 @@ function func_9(a, b) {
 
 function func_10() {
 
+    let k = 0;
+    let out = document.querySelector('#task10');
+    let str = '';
+
+    while (k < 6) {
+        k++;
+        if (k % 2 == 0) {
+            str += '*';
+        } else {
+            let l = 0;
+            while (l < 2) {
+                str += '*';
+                l++;
+            }
+        }
+        str += '<br>';
+    }
+
+    out.innerHTML = str;
+
 }
+// func_10();
+
 
 // Task 11
 // Создайте функцию func_11, которая вернет следующую строку: 10 1 9 2 8 3. . 1 10. Решаем через
 // while.
 
 function func_11() {
+    let out = document.querySelector('#task10');
+    let res = '';
+    let k = 20;
+
+    while (k > 0) {
+        if (k % 2 == 0) {
+            let p1 = 0;
+            while (p1 < k) {
+                res += 1;
+                p1++;
+            }
+        } else {
+            let p2 = 10;
+            while (p2 > 1) {
+                res += 2;
+                p2--;
+            }
+        }
+        // res += k + `&nbsp;`;
+        k--;
+
+    }
+    out.innerHTML = res;
 
 }
+func_11();
 
 // Task 12
 // Прочитайте о цикле <a href = "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/do...while"
