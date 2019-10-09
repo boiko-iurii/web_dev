@@ -205,39 +205,21 @@ function func_10() {
 // Task 11
 // Создайте функцию func_11, которая вернет следующую строку: 10 1 9 2 8 3. . 1 10. Решаем через
 // while.
-// 10 1 9 2 8 3 7 4 6 5
-// 5 6 4 7 3 8 2 9 1 10
 
 function func_11() {
     let out = document.querySelector('#task11');
-    let res = 5;
-    // let k = 0;
-
-    // while (k < 10) {
-    //     if (k % 2 == 0) {
-    //         res += -k;
-    //     } else {
-    //         res += k;
-    //     }
-    //     k++;
-    //     // res += ' ';
-
-    //     console.log(res);
-    // }
-
+    let res = '';
+    let k = 1;
     let m = 10;
-    while (m > 5) {
-        if (m % 2 == 0) {
-            res += m;
-        } else {
-            res += -m;
-        }
-        m--;
-        // res += ' ';
 
+    while (k <= 10 && m >= 1) {
+        res += `${m}&nbsp;${k}&nbsp;`;
+        k++;
+        m--;
         console.log(res);
     }
-    // out.innerHTML = res;
+
+    out.innerHTML = res;
 }
 // func_11();
 
@@ -293,44 +275,84 @@ function func_14() {
     } while (day > 1);
     console.log(day);
 }
-func_14();
+// func_14();
 
 // Task 15
 // Гермиона Грейнджер в первый день наварила 1.1 литра зелья.Во второй день на 0.3 литра зелья больше.Напишите функцию func_15, которая вернет день, когда в Хоргвардсе не останется пустых котлов(суммарный объем котлов в замке 568 литров).Обратите внимание, что вам нужно найти суммарных объем сваренного зелья, а не дневной объем.Используем do while.
 
 function func_15() {
-
+    let potion = 1.1;
+    let day = 1;
+    const end = 568;
+    do {
+        if (potion >= end) break;
+        potion += 0.3;
+        day++;
+    } while (day > 1);
+    console.log('day', day);
 }
+// func_15();
 
 // Task 16
 // На странице есть четыре параграфа p.task-16. Используя цикл do ..while посчитайте количество параграфов p.task-16 и если число четное - верните значение, если нет - верните false.Код напишите в функции func_16.
 
 function func_16() {
-
+    let p = document.querySelectorAll('p.task-16');
+    if (p.length % 2 == 0) {
+        console.log(p.length);
+    } else {
+        console.log(false);
+    }
 }
+// func_16();
 
 // Task 17
 // На странице есть четыре параграфа p.task-16. Используя цикл do ..while выведите в первый p.task-16 - число 1, во второй 2 и т.д.Решение оформите в виде функции func_17.
 
 function func_17() {
+    let p = document.querySelectorAll('p.task-16');
+    let k = 0;
+    do {
+        p[k].innerHTML = k + 1;
+        k++;
+    } while (k < p.length);
 
 }
-
+// func_17();
 
 // Task 18
 // На странице есть три параграфа p.task-18. Используя цикл do ..while выведите в первый p.task-18 - число равное количеству параграфов p.task - 18, во второй на единицу меньше и т.д.Решение оформите в виде функции func_18.
 
 function func_18() {
-
+    let p = document.querySelectorAll('p.task-18');
+    let k = p.length;
+    let n = 1;
+    do {
+        k--;
+        p[k].innerText = n;
+        n++;
+        console.log(k);
+    } while (k >= 1 && n <= p.length);
 }
-
+// func_18();
 
 // Task 19
 // Напишите функцию func_19, которая возвращает строку вида: 1*3*5*7*9*11*13*15*17*19. Решите с помощью do while.
 
 function func_19() {
-
+    let k = 1;
+    let res = '';
+    do {
+        if (k % 2 == 0) {
+            res += '*';
+        } else {
+            res += k;
+        }
+        k++;
+    } while (k < 20);
+    console.log(res);
 }
+// func_19();
 
 // Task 20
 // Напишите функцию func_20, которая возвращает строку вида:
@@ -340,5 +362,23 @@ function func_19() {
 //     * * * 1
 
 function func_20() {
+    let out = document.querySelector('#task20');
+    let k = 0;
+    let str = '';
 
+    do {
+        let m = 0;
+        do {
+            if (m == k) {
+                str += '1 ';
+            } else {
+                str += '* ';
+            }
+            m++;
+        } while (m < 4);
+        str += '<br>';
+        k++;
+    } while (k < 4);
+    out.innerHTML = str;
 }
+func_20()
