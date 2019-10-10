@@ -1,0 +1,19 @@
+html,
+body {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 20px;
+}
+
+p {
+    width: 150px;
+    height: 20px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.css-1 {
+    background: green;
+}

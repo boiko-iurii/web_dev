@@ -381,4 +381,4 @@ function func_20() {
     } while (k < 4);
     out.innerHTML = str;
 }
-func_20()
+// func_20()
